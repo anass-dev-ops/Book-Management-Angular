@@ -11,8 +11,20 @@
       <div  class="card my-2">
         <div class="card-header">{{b.title}}</div>
         <div class="card-body">
-          {{books[0].description}}
+          {{b.description}}
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="alert alert-light border">
+        <div class="h6 text-primary text-center">Book Details</div>
+        <p class="font-weight-bold">{{book.title}}</p>
+        <p>{{book.description}}</p>
+        <p>{{book.price}}</p>
+        <p>{{book.author}}</p>
+        <p>{{book.edition}}</p>
       </div>
     </div>
   </div>
