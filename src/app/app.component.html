@@ -1,4 +1,5 @@
 <div class="container">
+  
   <div class="row mt-3">
     <div class="col">
       <div class="alert alert-light border">
@@ -6,6 +7,31 @@
       </div>
     </div>
   </div>
+
+<!-- Presentation sous forme list -->
+<table class="table">
+  <thead>
+    <th>#</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Actions</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let b of books">
+      <td>{{b.id}}</td>
+      <td>{{b.title}}</td>
+      <td>{{b.description}}</td>
+      <td>
+        <button class="btn btn-sm btn-outline-info">Modifier</button>
+        <button class="btn btn-sm btn-outline-danger mx-2">Supprimer</button>
+        <button class="btn btn-sm btn-outline-primary">Détails</button>
+      </td>
+    </tr>
+  </tbody>
+  <tr></tr>
+</table>
+
+<!-- presentation sous forme cartes -->
   <div class="row">
     <div *ngFor="let b of books" class="col-md-3">
       <div  class="card my-2">
