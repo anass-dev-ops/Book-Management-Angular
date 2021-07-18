@@ -12,6 +12,7 @@ export class AppComponent {
 
   books: Book[] = [];
   book: Book = {};
+  displayForm = false;
 
   constructor(private bookService: BookService) {
     this.onGetBooks();

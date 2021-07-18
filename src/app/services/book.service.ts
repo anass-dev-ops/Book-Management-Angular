@@ -7,8 +7,8 @@ import { Book } from '../entities/Book';
 })
 export class BookService {
 
-  public host = 'https://an1book.herokuapp.com/';
-  //public host = 'http://localhost:8080';
+  //public host = 'https://an1book.herokuapp.com/';
+  public host = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
 
