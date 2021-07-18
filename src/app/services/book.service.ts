@@ -19,4 +19,8 @@ export class BookService {
   public getBookById(id: number) {
     return this.http.get<Book>(`${this.host}/books/${id}`);
   }
+
+  public addBook(book: Book) {
+    return this.http.post(`${this.host}/books`, book);
+  }
 }
