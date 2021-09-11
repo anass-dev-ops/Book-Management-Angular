@@ -20,6 +20,10 @@ export class BookService {
     return this.http.get<Book>(`${this.host}/books/${id}`);
   }
 
+  public deleteBookById(id: number) {
+    return this.http.delete<Book>(`${this.host}/books/${id}`);
+  }
+
   public addBook(book: Book) {
     return this.http.post(`${this.host}/books`, book);
   }

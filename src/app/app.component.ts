@@ -36,6 +36,16 @@ export class AppComponent {
     });
   }
 
+  public onDeleteBookById(id: number) {
+    const isConfirm = confirm("Are You Sur To Delete This Item?");
+    if (isConfirm) {
+      this.bookService.deleteBookById(id).subscribe((data: Book) => {
+        this.book = data;
+        this.onGetBooks();
+      });
+    }
+  }
+
   public onAddBook() {
     console.log(this.bookForm.value);
     this.bookService.addBook(this.bookForm.value).subscribe(data => {
