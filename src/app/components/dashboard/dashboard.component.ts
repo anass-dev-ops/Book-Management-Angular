@@ -8,11 +8,12 @@ import { BookService } from 'src/app/services/book.service';
 })
 export class DashboardComponent implements OnInit {
 
+  books: any;
 
   constructor(private bookService: BookService) { }
 
   ngOnInit(): void {
-
+    this.books = this.bookService.getBooks2();
   }
 
 }

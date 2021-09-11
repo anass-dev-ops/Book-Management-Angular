@@ -58,11 +58,11 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Data Structures and Algorithms Made Easy in Java: Data Structure and Algorithmic Puzzles, Second Edition</td>
-                                            <td>Narasimha Karumanchi</td>
-                                            <td>$39.99</td>
+                                        <tr *ngFor="let b of books">
+                                            <td>{{b.id}}</td>
+                                            <td>{{b.title}}</td>
+                                            <td>{{b.author}}</td>
+                                            <td>{{b.price}}</td>
                                             <td><button class="btn btn-danger btn-sm">Edite</button></td>
                                             <td><button class="btn btn-outline-danger btn-sm">Delete</button></td>
                                         </tr>
