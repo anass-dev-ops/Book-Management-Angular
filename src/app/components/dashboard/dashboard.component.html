@@ -1,5 +1,6 @@
-  <!-- Start sidbar -->
-  <div class="dashboard">
+ 
+ <!-- Start sidbar -->
+ <div class="dashboard">
     <div class="container-fluid">
         <div class="row">
             <div class="col-2 mycol bg-blue text-light text-center">
@@ -7,8 +8,8 @@
                     <div class="brand mt-3"><span>B</span>ooks</div>
                     <h6 class="text-left mt-5">Profile</h6>
                     <ul class="list-unstyled">
-                        <li class="active">Books List</li>
-                        <li>Add Book</li>
+                        <li routerLink="/dashboard/bookslist" routerLinkActive="active">Books List </li>
+                        <li routerLink="/dashboard/addbook" routerLinkActive="active">Add Book</li>
                         <li>Dashboard</li>
                         <li>Books View</li>
                     </ul>
@@ -41,36 +42,7 @@
                     </nav>
                     <!-- End Navbar -->
                 <div class="content">
-                    <div class="container">
-                        <div class="title my-5">
-                            <h1><span>1</span> Books List</h1>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Title</th>
-                                            <th>Author</th>
-                                            <th>Price</th>
-                                            <th colspan="2">Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr *ngFor="let b of books">
-                                            <td>{{b.id}}</td>
-                                            <td>{{b.title}}</td>
-                                            <td>{{b.author}}</td>
-                                            <td>{{b.price}}</td>
-                                            <td><button class="btn btn-danger btn-sm">Edite</button></td>
-                                            <td><button class="btn btn-outline-danger btn-sm">Delete</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    <router-outlet></router-outlet>     
                 </div>
             </div>
         </div>

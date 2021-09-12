@@ -7,12 +7,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ViewComponent } from './components/view/view.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AddbookComponent } from './components/addbook/addbook.component';
+import { BookslistComponent } from './components/bookslist/bookslist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddbookComponent,
+    BookslistComponent  
   ],
   imports: [
     BrowserModule,

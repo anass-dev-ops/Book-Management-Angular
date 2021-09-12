@@ -50,6 +50,7 @@ body {
 .dashboard .sidbar ul  li {
     text-align: left;
     margin: 40px 0 0 30px;
+    cursor: pointer;
 }
 
 .dashboard .sidbar ul  li.active  {
@@ -65,23 +66,5 @@ body {
 .dashboard .content {
     height: 100vh;
 }
-.dashboard .content .title h1 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #555;
-}
 
-.dashboard .content .title h1 span {
-    background-color: var(--color_pink);
-    padding: 3px 13px;
-    border-radius: 10px;
-    color: #fff;
-    margin-right: 7px;
-}
-.dashboard .content table tbody tr td:nth-child(2) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 300px;
-}
 /* End Content */

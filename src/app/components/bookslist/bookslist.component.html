@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="title my-5">
+        <h1><span>1</span> Books List</h1>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Price</th>
+                        <th colspan="2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let b of books">
+                        <td>{{b.id}}</td>
+                        <td>{{b.title}}</td>
+                        <td>{{b.author}}</td>
+                        <td>{{b.price}}</td>
+                        <td><button class="btn btn-danger btn-sm">Edite</button></td>
+                        <td><button class="btn btn-outline-danger btn-sm">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -7,13 +7,11 @@ import { BookService } from 'src/app/services/book.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  
 
-  books: any;
-
-  constructor(private bookService: BookService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.books = this.bookService.getBooks2();
   }
 
 }
