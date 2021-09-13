@@ -13,7 +13,16 @@ export class ViewComponent implements OnInit {
   constructor(private bookService: BookService) { }
 
   ngOnInit(): void {
-    this.books = this.bookService.getBooks2();
+    //this.books = this.bookService.getBooks2();
+    this.onGetBooks();
+  }
+
+  public onGetBooks() {
+    this.bookService.getBooks().subscribe(data => {
+      this.books = data;
+    }, error => {
+
+    });
   }
 
 }

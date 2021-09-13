@@ -29,9 +29,9 @@
   <section class="books pb-5">
     <div class="container-fluid">
         <div class="row">
-            <div *ngFor="let b of books" class="col-3 mb-5">
+            <div *ngFor="let b of books" class="col-xl-3 mb-5">
                 <div class="mycard text-center">
-                    <img [src]="'assets/images/book_'+b.id+'.jpg'" alt="">
+                    <img [src]="'assets/images/book_'+(b.id+1)+'.jpg'" alt="">
                     <div class="divider my-2"></div>
                     <p>{{b.title}}</p>
                     <h6>{{b.price}}</h6>
