@@ -20,8 +20,8 @@
                         <td>{{b.title}}</td>
                         <td>{{b.author}}</td>
                         <td>{{b.price}}</td>
-                        <td><button class="btn btn-danger btn-sm">Edite</button></td>
-                        <td><button class="btn btn-outline-danger btn-sm">Delete</button></td>
+                        <td><button class="btn btn-danger btn-sm" (click)="onEdite(b.id)">Edite</button></td>
+                        <td><button class="btn btn-outline-danger btn-sm" (click)="onDelete(b.id)">Delete</button></td>
                     </tr>
                 </tbody>
             </table>
