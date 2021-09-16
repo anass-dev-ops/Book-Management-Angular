@@ -28,7 +28,7 @@
   <!-- Start books -->
   <section class="books pb-5">
     <div class="container-fluid">
-        <div class="row">
+        <div *ngIf="books.length > 0" class="row">
             <div *ngFor="let b of books" class="col-xl-3 mb-5">
                 <div class="mycard text-center">
                     <img [src]="'assets/images/book_'+(b.id+1)+'.jpg'" alt="">
@@ -38,6 +38,7 @@
                 </div>
             </div>
         </div>
+        <div *ngIf="books.length <= 0" class="alert alert-primary m-5 d-block">Loading Data ...</div>
     </div>
   </section>
   <!-- End books -->
