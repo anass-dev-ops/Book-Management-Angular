@@ -10,6 +10,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddbookComponent } from './components/addbook/addbook.component';
 import { BookslistComponent } from './components/bookslist/bookslist.component';
 import { EditebookComponent } from './components/editebook/editebook.component';
+import { DashComponent } from './components/dash/dash.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditebookComponent } from './components/editebook/editebook.component';
     DashboardComponent,
     AddbookComponent,
     BookslistComponent,
-    EditebookComponent  
+    EditebookComponent,
+    DashComponent  
   ],
   imports: [
     BrowserModule,
