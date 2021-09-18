@@ -80,4 +80,8 @@ export class BookService {
   public addBook(book: Book) {
     return this.http.post(`${this.host}/books`, book);
   }
+
+  public updateBook(book: Book) {
+    return this.http.put(`${this.host}/books`, book);
+  }
 }

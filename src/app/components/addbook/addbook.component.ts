@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { BookService } from 'src/app/services/book.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class AddbookComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private bookService: BookService
+    private bookService: BookService,
+    private route: Router
     ) { }
 
   ngOnInit(): void {
@@ -30,6 +32,7 @@ export class AddbookComponent implements OnInit {
   onAddBook() {
     this.bookService.addBook(this.bookForm.value).subscribe(data => {
       console.log(data);
+      this.route.navigateByUrl(`/dashboard/bookslist`);
     });
     
   }
